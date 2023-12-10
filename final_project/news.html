@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Interactive carbon rights platform for children</title>
+        <link href= "{%static 'css/style.css' %}" rel="stylesheet" type="text/css">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/lib/w3.css">
+        <!-- css -->
+        <link rel="stylesheet" href="css/ming.css">
+    </head>  
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="./index.html">Carbon Credit Platform</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" id="news">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Carbon Neutral</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">We know what's required to avoid the most catastrophic effects of climate change, including super drought, mass extinctions and underwater coastal cities: We need to ditch fossil fuel by 2050.</p>
+                        <a class="btn btn-primary btn-xl" href="./about.html">更多資訊</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <script>
+            const itemsPerPage = 5; // 每页显示的项目数
+            let currentPage = 1;
+            const list = document.getElementById('list');
+            const pageNumbers = document.getElementById('page-numbers');
+            const items = Array.from(list.getElementsByTagName('li'));
+        
+            function showPage(page) {
+              const start = (page - 1) * itemsPerPage;
+              const end = start + itemsPerPage;
+        
+              items.forEach((item, index) => {
+                if (index >= start && index < end) {
+                  item.style.display = 'block';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            }
+            function createPageNumbers() {
+              const maxPage = Math.ceil(items.length / itemsPerPage);
+              for (let i = 1; i <= maxPage; i++) {
+                const pageNumber = document.createElement('li');
+                pageNumber.innerText = i;
+                pageNumber.addEventListener('click', () => {
+                  currentPage = i;
+                  showPage(currentPage);
+                });
+                pageNumbers.appendChild(pageNumber);
+              }
+            }
+        
+            createPageNumbers();
+            showPage(currentPage);
+        </script>
+        <section class="section-news-background">
+            <div class="section-div ">
+                <ul class="ul">
+                    <li class="section-news" title="近期新聞">
+                        <a style="text-decoration: none; " href="javascript:;" onmouseover="showContent('recent-news')">近期新聞</a>
+                    </li>
+                    <li class="section-news" title="國外新聞">
+                        <a style="text-decoration: none ;" href="javascript:;" onmouseover="showContent('foreign-news')">國外新聞</a>
+                    </li>
+                    <il class="section-news" title="企業政策">
+                        <a style="text-decoration: none ;" href="javascript:;" onmouseover="showContent('company-policy')"> 企業政策</a>
+                    </il>
+                    <li class="section-news" title="其他消息">
+                        <a style="text-decoration: none;" href="javascript:;" onmouseover="showContent('other-news')">其他消息</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="listTxt con content-section " id="recent-news">
+                <ul class="listNews pagination">
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://tw.news.yahoo.com/%E6%B8%9B%E7%A2%B3%E5%B7%AE%E8%B7%9D%E5%A4%A7%E5%A6%82%E5%B3%BD%E8%B0%B7-%E8%81%AF%E5%90%88%E5%9C%8B%E6%9C%80%E6%96%B0%E6%8E%92%E6%94%BE%E5%A0%B1%E5%91%8A%E4%BC%B0%E6%9C%AC%E4%B8%96%E7%B4%80%E6%9C%AB%E5%8D%87%E6%BA%AB2-9-c-095928259.html">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">減碳差距大如峽谷 聯合國最新排放報告估本世紀末升溫2.9°C</b>
+                                <div class="listDate">2023.11.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.inside.com.tw/article/33424-world-richest-emit-carbon-bottom">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">碳排也有巨大階級差：全球前 1% 富人碳排量跟倒數 51 億人一樣多</b>
+                            <div class="listDate">2023.11.23</div>
+                        </div>
+                       </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.ftvnews.com.tw/news/detail/2023B21I26M1">
+                            <div class="listTxt">
+                                <b>聯合國示警「氣候災難」　本世紀全球均溫恐上升攝氏3度</b>
+                                <div class="listDate">2023.11.21</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.ctee.com.tw/news/20231116700092-439901">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">台灣碳排放法制可否後發先至？</b>
+                                <div class="listDate">2023.11.16</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.msn.com/zh-tw/news/other/%E5%BE%9E%E6%B8%9B%E7%A2%B3%E9%82%81%E5%90%91%E5%A4%A7%E8%87%AA%E7%84%B6%E6%AD%A3%E6%88%90%E9%95%B7-%E8%B3%87%E8%AA%A0%E6%94%9C%E6%89%8B%E4%BE%9B%E6%87%89%E9%8F%88-%E5%AF%A6%E7%8F%BE%E5%85%A8%E6%96%B9%E4%BD%8D%E6%B7%A8%E9%9B%B6%E8%BD%89%E5%9E%8B/ar-AA1jXtxD">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">從減碳邁向大自然正成長： 資誠攜手供應鏈 實現全方位淨零轉型</b>
+                                <div class="listDate">2023.11.15</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <div class="btnBar1">
+                        <a href="./recent_page.html" class="ubtn2" title="看更多 新聞發布">看更多 新聞發布</a>
+                    </div>
+                </div>
+            </div>
+            <div class="listTxt con content-section " id="foreign-news">
+                <ul class="listNews pagination">
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://tw.news.yahoo.com/%E6%B8%9B%E7%A2%B3%E5%B7%AE%E8%B7%9D%E5%A4%A7%E5%A6%82%E5%B3%BD%E8%B0%B7-%E8%81%AF%E5%90%88%E5%9C%8B%E6%9C%80%E6%96%B0%E6%8E%92%E6%94%BE%E5%A0%B1%E5%91%8A%E4%BC%B0%E6%9C%AC%E4%B8%96%E7%B4%80%E6%9C%AB%E5%8D%87%E6%BA%AB2-9-c-095928259.html">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">減碳差距大如峽谷 聯合國最新排放報告估本世紀末升溫2.9°C</b>
+                                <div class="listDate">2023.11.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.inside.com.tw/article/33424-world-richest-emit-carbon-bottom">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">碳排也有巨大階級差：全球前 1% 富人碳排量跟倒數 51 億人一樣多</b>
+                            <div class="listDate">2023.11.23</div>
+                        </div>
+                       </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.ftvnews.com.tw/news/detail/2023B21I26M1">
+                            <div class="listTxt">
+                                <b>聯合國示警「氣候災難」　本世紀全球均溫恐上升攝氏3度</b>
+                                <div class="listDate">2023.11.21</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.ctee.com.tw/news/20231116700092-439901">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">台灣碳排放法制可否後發先至？</b>
+                                <div class="listDate">2023.11.16</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.msn.com/zh-tw/news/other/%E5%BE%9E%E6%B8%9B%E7%A2%B3%E9%82%81%E5%90%91%E5%A4%A7%E8%87%AA%E7%84%B6%E6%AD%A3%E6%88%90%E9%95%B7-%E8%B3%87%E8%AA%A0%E6%94%9C%E6%89%8B%E4%BE%9B%E6%87%89%E9%8F%88-%E5%AF%A6%E7%8F%BE%E5%85%A8%E6%96%B9%E4%BD%8D%E6%B7%A8%E9%9B%B6%E8%BD%89%E5%9E%8B/ar-AA1jXtxD">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">從減碳邁向大自然正成長： 資誠攜手供應鏈 實現全方位淨零轉型</b>
+                                <div class="listDate">2023.11.15</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <div class="btnBar1">
+                        <a href="./foreign_page.html" class="ubtn2" title="看更多 新聞發布">看更多 新聞發布</a>
+                    </div>
+                </div>
+            </div>
+            <div class="listTxt con content-section" id="company-policy">
+                <ul class="listNews pagination">
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.businessweekly.com.tw/carbon-reduction/blog/3008875">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">統一超商2022年永續報告書</b>
+                                <div class="listDate">2023.07.27</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://esg.tsmc.com/download/file/2022_sustainabilityReport/chinese/c-all.pdf">
+                            <div class="listTxt">
+                                <b>台積電2023年永續報告書</b>
+                                <div class="listDate">2023.06.30</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://money.udn.com/money/story/5612/7501462">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">信義房屋2022年永續報告書</b>
+                            <div class="listDate">2023.03.31</div>
+                        </div>
+                       </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://blog.zerozero.com.tw/30598/%E9%81%B8%E5%B0%8D%E4%BA%A4%E9%80%9A%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%A2%B3%E6%8E%92%E6%94%BE%E7%9F%A5%E5%A4%9A%E5%B0%91%EF%BC%9F/">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">台北富邦銀行2022年永續報告書</b>
+                                <div class="listDate">2023.03.26</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.businessweekly.com.tw/carbon-reduction/blog/3008875">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">台灣4大「ESG龍頭企業」，除了台積電還有誰？</b>
+                                <div class="listDate">2022.01.17</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <div class="btnBar1">
+                        <a href="./company_page.html" class="ubtn2" title="看更多 新聞發布">看更多 新聞發布</a>
+                    </div>
+                </div>
+            </div>
+            <div class="listTxt con content-section" id="other-news">
+                <ul class="listNews pagination">
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://tw.news.yahoo.com/%E7%A2%B3%E6%AC%8A%E9%86%9C%E8%81%9E-vcs%E8%AA%8D%E8%AD%89%E7%9A%84%E6%A3%AE%E6%9E%97%E7%A2%B3%E6%AC%8A%E6%88%90%E4%BA%86%E5%A3%81%E7%B4%99-030149498.html?guccounter=1">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">VCS認證的森林碳權成了壁紙？</b>
+                                <div class="listDate">2023.10.14</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.businessweekly.com.tw/carbon-reduction/blog/3013531">
+                            <div class="listTxt">
+                                <b>《氣候法》減碳、抵換規定新上路 最快年底可申請碳權</b>
+                                <div class="listDate">2023.10.13</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://money.udn.com/money/story/5612/7501462">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">放寬！512家排碳大戶減碳優於目標 可取得「類碳權」</b>
+                            <div class="listDate">2023.10.12</div>
+                        </div>
+                       </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://blog.zerozero.com.tw/30598/%E9%81%B8%E5%B0%8D%E4%BA%A4%E9%80%9A%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%A2%B3%E6%8E%92%E6%94%BE%E7%9F%A5%E5%A4%9A%E5%B0%91%EF%BC%9F/">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">選對交通工具，碳排放知多少？</b>
+                                <div class="listDate">2022.03.02</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="listCon" rel="noopener noreferrer" href="https://www.businessweekly.com.tw/carbon-reduction/blog/3008875">
+                            <div class="listTxt">
+                                <b title="(另開視窗)">台灣4大「ESG龍頭企業」，除了台積電還有誰？</b>
+                                <div class="listDate">2022.01.17</div>
+                            </div>
+                        </a>
+                    </li>
+                    <div>
+                    <div class="btnBar1">
+                        <a href="./other_page.html" class="ubtn2" title="看更多 新聞發布">看更多 新聞發布</a>
+                    </div>
+                </div>
+                </ul>
+                
+            </div>
+            <script>
+                // Function to show content based on the contentId
+                function showContent(contentId) {
+                    // Hide all content sections
+                    var contentSections = document.querySelectorAll('.content-section');
+                    contentSections.forEach(function (section) {
+                        section.style.display = 'none';
+                    });
+            
+                    // Show the selected content section
+                    var selectedContent = document.getElementById(contentId);
+                    selectedContent.style.display = 'block';
+                }
+            
+                // Show the 'recent-news' section by default
+                document.addEventListener('DOMContentLoaded', function () {
+                    showContent('recent-news');
+                });
+            </script>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-leaf py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="small text-center text-white-50">
+                相關聯絡 :
+                <a target="_blank" href="https://www.epa.gov.tw/" style="text-decoration: none;" class="text-dark">
+                    環保署
+                </a>
+                |
+                <a target="_blank" href="https://worldesgsummit.com/" style="text-decoration: none;" class="text-dark">
+                    World ESG Summit
+                </a>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
