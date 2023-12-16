@@ -82,60 +82,11 @@
 }
 .footer-item > a{
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: azure;
     text-align: center;
     margin: auto .1em auto auto;
 }
 .footer-item > a + a::before{
     content: "|";
     margin-right: .1em;
-}
-
-/* -----------------------css-----------------------*/
-header#index{
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
-}
-header#news{
-    background: linear-gradient(to bottom, rgba(66, 74, 92, 0.8) 0%, rgba(54, 71, 54, 0.8) 100%), url("../assets/img/R.jpg");
-}
-header#about{
-    background: linear-gradient(to bottom, rgba(66, 88, 92, 0.8) 0%, rgba(66, 89, 92, 0.8) 100%), url("../assets/img/Sea.jpg");
-}
-header#calculator{
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
-}
-#about img{
-    width: 100%;
-}
-.listNews {
-    width: 100%;
-}
-.section-news-background img{
-   width: 100%;
-
-}
-.listTxt::after{
-    content: "";
-    margin-top: 0.8em;
-    width: 90%;
-    /* height: 2px; */
-    /* background: #228B22; */
-    border-bottom: .5px dashed #228B22;
-    position: absolute;
-
-}
-@media screen and (max-width:768px){
-   .listNews li a{
-    margin-top: 3em;
-    }      
-   
-    .page.active{
-        overflow: auto;
-    }
-}
-#pagination {
-    display: flex;
-    justify-content: center;
-    list-style: none; 
-    padding: 10px; 
 }

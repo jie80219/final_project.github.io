@@ -11163,7 +11163,7 @@ ul.pagination li a
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-    border-bottom: 0.5px dashed #228B22;
+    /* border-bottom: 0.5px dashed #228B22; */
 }
 
 .pagination li:first-child a 
@@ -11196,7 +11196,7 @@ i* {
 .page
 {
   margin: 6px 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     clear: left;
     white-space: nowrap;
 }
