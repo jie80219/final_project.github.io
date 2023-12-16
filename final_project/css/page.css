@@ -25,7 +25,12 @@ h2
  ul.listNews.pagination.hidden-news-list {
     list-style-type: none;
 }
-
+#pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none; 
+    padding: 10px; 
+}
 ul.listNews.pagination.hidden-news-list > li > a > div.listTxt > b::before {
     content: '\25B6';
     color: #0de72a; 
